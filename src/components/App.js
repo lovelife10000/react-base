@@ -21,9 +21,11 @@ class App extends Component{
             fatherExist:false
         });
     }
+
     render(){
         return(
-            <div>app
+            <div>
+                {this.props.children}
                 {this.state.fatherExist&&<Father cde={this.state.cde} changeCde={this.changeCde.bind(this)} changeFatherExist={this.changeFatherExist.bind(this)}></Father>}
             </div>
         )
