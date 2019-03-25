@@ -3,7 +3,11 @@ import Father from "./Father";
 
 class App extends Component{
     constructor(props){
+
+
         super(props);
+        console.log(this);
+        debugger
         this.state={
             cde:1,
             fatherExist:true
