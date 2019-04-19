@@ -6,7 +6,7 @@ class ChildOne extends Component{
     }
     render(){
         return(
-            <div>ChildOne</div>
+            <div onClick={this.props.changeAbc}>ChildOne</div>
         )
     }
 }

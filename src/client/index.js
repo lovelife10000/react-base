@@ -2,7 +2,7 @@ import React from 'react';
 console.log(React);
 debugger
 import ReactDom from 'react-dom';
-import App from '../components/App';
+import App from '../componentsNew/App';
 
 ReactDom.render(
     <App>
