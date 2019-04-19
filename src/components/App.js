@@ -12,6 +12,7 @@ class App extends Component{
             cde:1,
             fatherExist:true
         }
+
     }
 
     changeCde(){
@@ -28,11 +29,24 @@ class App extends Component{
 
     render(){
         return(
-            <div>
+            <div >
                 {this.props.children}
+                {/*{  React.Children.map((item,index)=>{*/}
+                    {/*debugger*/}
+                {/*})}*/}
                 {this.state.fatherExist&&<Father cde={this.state.cde} changeCde={this.changeCde.bind(this)} changeFatherExist={this.changeFatherExist.bind(this)}></Father>}
             </div>
         )
+    }
+
+    componentDidMount(){
+        var len=React.Children.count(this.props.children);
+        console.log(len);
+
+        React.Children.map(this.props.children,(item,index)=>{
+            debugger
+        });
+        debugger
     }
 }
 
